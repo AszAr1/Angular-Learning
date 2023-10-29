@@ -8,13 +8,15 @@
     <app-wish-filter
       [(filter)]="filter"
     >
-     </app-wish-filter>
+    </app-wish-filter>
   </div>
 
   <div class="mt-3 row">
-    <app-wish-list
-      [wishes]="wishes.filter(filter)"
-    >
-    </app-wish-list>
+    <div class="col-sm-4">
+      <app-wish-list
+        [wishes]="wishes.filter(filter)"
+      >
+      </app-wish-list>
+    </div>
   </div>
 </div>
