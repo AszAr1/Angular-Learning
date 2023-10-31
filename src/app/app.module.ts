@@ -1,27 +1,22 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { WishListComponent } from './wish-list/wish-list.component';
-import { AddWishFormComponent } from './add-wish-form/add-wish-form.component';
-import { HttpClientModule } from '@angular/common/http'
-
-import { WishFilterComponent } from './wish-filter/wish-filter.component';
-import { WishListItemComponent } from './wish-list-item/wish-list-item.component';
+import { WishModule } from './wish/wish.module';
+import { ContactModule } from './contact/contact.module';
+import { SecondComponent } from './second/second.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WishListComponent,
-    AddWishFormComponent,
-    WishFilterComponent,
-    WishListItemComponent
+    SecondComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpClientModule,
+    AppRoutingModule,
+    WishModule,
+    ContactModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
