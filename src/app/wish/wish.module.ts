@@ -8,6 +8,8 @@ import { AddWishFormComponent } from './add-wish-form/add-wish-form.component';
 import { WishFilterComponent } from './wish-filter/wish-filter.component';
 import { WishListItemComponent } from './wish-list-item/wish-list-item.component';
 import { WishComponent } from './wish.component';
+import { AppRoutingModule } from '../app-routing.module';
+import { WishDetailComponent } from './wish-detail/wish-detail.component';
 
 @NgModule({
   declarations: [
@@ -15,11 +17,13 @@ import { WishComponent } from './wish.component';
     WishFilterComponent,
     AddWishFormComponent,
     WishListItemComponent,
+    WishDetailComponent,
     WishComponent,
   ],
   imports: [
     FormsModule,
     HttpClientModule,
+    AppRoutingModule,
     CommonModule,
   ],
   exports: [

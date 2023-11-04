@@ -1,4 +1,15 @@
 <div class="container">
+  <div class="flex">
+    <div class="m-1">
+        <a routerLink="">Home</a>
+    </div>
+    <div class="m-1">
+        <a routerLink="second">Second</a>
+    </div>
+    <div class="m-1">
+        <a routerLink="contact">Contact Us</a>
+    </div>
+  </div>
   <app-add-wish-form
     (addWish)="wishes.push($event)"
   >

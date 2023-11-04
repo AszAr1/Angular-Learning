@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular/common/http';
 import { WishItem } from '../shared/models/wishItem';
-import { catchError, throwError } from 'rxjs';
+import { catchError, of, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -39,10 +39,5 @@ export class WishService {
     return throwError(() => new Error('Cannot get wishes from the server'))
   }
 
-  private addWish(wish: WishItem) {
-    let options = this.getStandardOptions()
-    options.headers = options.headers.set('Authorization', 'value-need-for-authorization')
-    // this.http.post(url, body, options)
-  }
 
 }
